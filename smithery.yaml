@@ -1,0 +1,33 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - mssqlServer
+      - mssqlDatabase
+      - mssqlUser
+      - mssqlPassword
+      - mssqlDriver
+    properties:
+      mssqlServer:
+        type: string
+        description: The server name or IP address for the MSSQL database.
+      mssqlDatabase:
+        type: string
+        description: The name of the MSSQL database to connect to.
+      mssqlUser:
+        type: string
+        description: The username for the MSSQL database.
+      mssqlPassword:
+        type: string
+        description: The password for the MSSQL database.
+      mssqlDriver:
+        type: string
+        description: The ODBC driver to use for MSSQL.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'python', args: ['src/mssql/server.py'], env: { MSSQL_SERVER: config.mssqlServer, MSSQL_DATABASE: config.mssqlDatabase, MSSQL_USER: config.mssqlUser, MSSQL_PASSWORD: config.mssqlPassword, MSSQL_DRIVER: config.mssqlDriver } })

@@ -5,6 +5,7 @@
 [![MCP](https://img.shields.io/badge/MCP-1.2.0-green.svg)](https://github.com/modelcontextprotocol)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104.1-teal.svg)](https://fastapi.tiangolo.com)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
+[![smithery badge](https://smithery.ai/badge/@amornpan/py-mcp-mssql)](https://smithery.ai/server/@amornpan/py-mcp-mssql)
 
 A Model Context Protocol server implementation in Python that provides access to Microsoft SQL Server databases. This server enables Language Models to inspect table schemas and execute SQL queries through a standardized interface.
 
@@ -32,6 +33,15 @@ A Model Context Protocol server implementation in Python that provides access to
 
 ## Installation
 
+### Installing via Smithery
+
+To install Python MSSQL Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@amornpan/py-mcp-mssql):
+
+```bash
+npx -y @smithery/cli install @amornpan/py-mcp-mssql --client claude
+```
+
+### Manual Installation
 ```bash
 git clone https://github.com/amornpan/py-mcp-mssql.git
 cd py-mcp-mssql
