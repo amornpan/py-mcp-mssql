@@ -4,5 +4,5 @@ uvicorn>=0.34.0
 python-dotenv>=1.0.1
 pyodbc>=4.0.35
 anyio>=4.5.0
-mcp==1.2.0
+mcp>=1.10.0
 python-dotenv
