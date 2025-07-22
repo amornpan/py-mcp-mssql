@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/amornpan-py-mcp-mssql-badge.png)](https://mseep.ai/app/amornpan-py-mcp-mssql)
+
 # Python MSSQL MCP Server
 
 [![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/amornpan/py-mcp-mssql)
